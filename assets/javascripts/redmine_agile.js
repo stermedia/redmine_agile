@@ -117,6 +117,7 @@
   }
 
   function AgileBoard(routes){
+	$(".issue-card p.attributes:contains('Sprint')").parent(".fields").parent(".issue-card").addClass( "bk-orange" );
 
     // ----- estimated hours ------
     this.recalculateEstimateHours = function(oldStatusId, newStatusId, value){
@@ -632,4 +633,5 @@ $(document).ready(function(){
   $('div#agile-board-errors').click(function(){
     $(this).animate({top: -$(this).outerHeight()}, 500);
   });
+$(".issue-card p.attributes:contains('Sprint')").parent(".fields").parent(".issue-card").addClass( "bk-orange" );
 });
